@@ -4,4 +4,4 @@
 
 | Slice | Status | Goal |
 | --- | --- | --- |
-| `99-omo-control-plane-smoke` | docs | OMO control-plane smoke |
+| `99-omo-control-plane-smoke` | in-progress| OMO control-plane smoke |
