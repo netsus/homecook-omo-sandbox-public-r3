@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "work_item_id": "99-omo-control-plane-smoke",
+  "attempts": {},
+  "review_loops": {
+    "backend": {
+      "requested_changes": 0,
+      "code_retries": 0,
+      "approvals": 0,
+      "feedback_seen_by_codex": false,
+      "last_feedback": null
+    },
+    "frontend": {
+      "requested_changes": 0,
+      "code_retries": 0,
+      "approvals": 0,
+      "feedback_seen_by_codex": false,
+      "last_feedback": null
+    }
+  },
+  "live_provider": {
+    "backend": {
+      "requested_tokens": [],
+      "applied_tokens": [],
+      "prompt_feedback_tokens": []
+    }
+  },
+  "events": []
+}

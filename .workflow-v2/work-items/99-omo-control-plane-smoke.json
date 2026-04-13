@@ -1,0 +1,62 @@
+{
+  "id": "99-omo-control-plane-smoke",
+  "title": "OMO control-plane smoke",
+  "project_profile": "homecook",
+  "change_type": "product",
+  "surface": "fullstack",
+  "risk": "medium",
+  "preset": "vertical-slice-strict",
+  "goal": "Verify the workflow-v2 supervisor control plane in a dedicated sandbox repository.",
+  "owners": {
+    "claude": "sparse-review-and-approval",
+    "codex": "implementation-and-integration",
+    "workers": [
+      "testing"
+    ]
+  },
+  "docs_refs": {
+    "source_of_truth": [
+      "AGENTS.md"
+    ],
+    "governing_docs": [
+      "docs/engineering/workflow-v2/README.md",
+      "docs/engineering/workflow-v2/omo-autonomous-supervisor.md"
+    ]
+  },
+  "workflow": {
+    "plan_loop": "recommended",
+    "review_loop": "required",
+    "external_smokes": [
+      "pnpm omo:smoke:control-plane"
+    ],
+    "execution_mode": "autonomous",
+    "merge_policy": "conditional-auto",
+    "max_fix_rounds": {
+      "backend": 0,
+      "frontend": 0
+    }
+  },
+  "verification": {
+    "required_checks": [
+      "pnpm validate:workflow-v2"
+    ],
+    "verify_commands": [
+      "pnpm validate:workflow-v2"
+    ],
+    "evaluator_commands": [],
+    "artifact_assertions": []
+  },
+  "status": {
+    "lifecycle": "planned",
+    "approval_state": "not_started",
+    "verification_status": "pending",
+    "evaluation_status": "not_started",
+    "evaluation_round": 0,
+    "last_evaluator_result": null,
+    "auto_merge_eligible": false,
+    "blocked_reason_code": null
+  },
+  "notes": {
+    "sandbox_repo": "netsus/homecook-omo-sandbox-public-r3"
+  }
+}

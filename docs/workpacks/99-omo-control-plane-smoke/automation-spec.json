@@ -1,0 +1,38 @@
+{
+  "slice_id": "99-omo-control-plane-smoke",
+  "execution_mode": "autonomous",
+  "risk_class": "medium",
+  "merge_policy": "conditional-auto",
+  "backend": {
+    "required_endpoints": [
+      "POST /internal/omo/control-plane-smoke"
+    ],
+    "invariants": [
+      "deterministic-review-loop"
+    ],
+    "verify_commands": [],
+    "required_test_targets": [
+      "tests/omo-control-plane-smoke.test.ts"
+    ]
+  },
+  "frontend": {
+    "required_routes": [
+      "/omo/control-plane-smoke"
+    ],
+    "required_states": [
+      "loading"
+    ],
+    "playwright_projects": [],
+    "artifact_assertions": [
+      "smoke/omo-control-plane"
+    ]
+  },
+  "external_smokes": [
+    "true"
+  ],
+  "blocked_conditions": [],
+  "max_fix_rounds": {
+    "backend": 0,
+    "frontend": 0
+  }
+}
